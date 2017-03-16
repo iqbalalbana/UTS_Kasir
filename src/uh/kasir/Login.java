@@ -131,7 +131,7 @@ public class Login extends javax.swing.JFrame {
         Connection connection;
         PreparedStatement ps;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_toko", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_utspbo", "root", "");
             ps = connection.prepareStatement("SELECT username, password FROM tb_akun WHERE username = ? AND password = ?");
             ps.setString(1, jtUser.getText());
             ps.setString(2, jpPass.getText());

@@ -18,7 +18,7 @@ public class FileKoneksi {
     public static Connection GetConnection() throws SQLException{
         if (koneksi == null) {
             Driver driver = new Driver();
-            koneksi = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/db_toko","root","");
+            koneksi = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/db_utspbo","root","");
         }
         return koneksi;
     }
