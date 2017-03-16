@@ -38,68 +38,72 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jtUser = new javax.swing.JTextField();
-        jbSignIn = new javax.swing.JButton();
         jbSignUp = new javax.swing.JButton();
+        jbSignIn = new javax.swing.JButton();
         jpPass = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        jtUser = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(178, 235, 242));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(178, 235, 242));
-        jPanel1.setForeground(new java.awt.Color(178, 235, 242));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 0));
         jPanel1.setLayout(null);
 
-        jLabel2.setText("Username");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(10, 90, 120, 20);
-
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
-        jLabel3.setText("Indomaret Login Kasir");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 10, 280, 40);
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 400, 70);
-        getContentPane().add(jtUser);
-        jtUser.setBounds(10, 120, 380, 30);
-
-        jbSignIn.setBackground(new java.awt.Color(178, 235, 242));
-        jbSignIn.setText("Sign In");
-        jbSignIn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSignInActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jbSignIn);
-        jbSignIn.setBounds(230, 240, 150, 40);
-
-        jbSignUp.setBackground(new java.awt.Color(178, 235, 242));
+        jbSignUp.setBackground(new java.awt.Color(102, 102, 0));
+        jbSignUp.setFont(new java.awt.Font("Swis721 Hv BT", 1, 14)); // NOI18N
         jbSignUp.setText("Sign Up");
         jbSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSignUpActionPerformed(evt);
             }
         });
-        getContentPane().add(jbSignUp);
-        jbSignUp.setBounds(10, 240, 150, 40);
-        getContentPane().add(jpPass);
-        jpPass.setBounds(10, 180, 380, 30);
+        jPanel1.add(jbSignUp);
+        jbSignUp.setBounds(160, 340, 110, 30);
 
+        jbSignIn.setBackground(new java.awt.Color(102, 102, 0));
+        jbSignIn.setFont(new java.awt.Font("Swis721 Hv BT", 1, 14)); // NOI18N
+        jbSignIn.setText("Sign In");
+        jbSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSignInActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbSignIn);
+        jbSignIn.setBounds(160, 380, 110, 30);
+        jPanel1.add(jpPass);
+        jpPass.setBounds(110, 300, 220, 30);
+
+        jLabel1.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
         jLabel1.setText("Password");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 160, 120, 20);
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(180, 270, 80, 30);
+        jPanel1.add(jtUser);
+        jtUser.setBounds(110, 220, 220, 30);
 
+        jLabel4.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
         jLabel4.setText("Username");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 90, 120, 20);
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(180, 190, 80, 30);
 
-        setBounds(0, 0, 416, 339);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/20110913133511_Indomart.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(-20, -20, 470, 170);
+
+        jLabel2.setFont(new java.awt.Font("Pristina", 1, 18)); // NOI18N
+        jLabel2.setText("Selamat Bekerja Admin, Lakukan Hal Yang Terbaik ");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 150, 370, 22);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 460, 430);
+
+        setBounds(0, 0, 456, 463);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSignUpActionPerformed

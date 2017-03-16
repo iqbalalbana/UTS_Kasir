@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.MessageFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +17,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 
 /**
  *
@@ -45,11 +43,6 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jlJam = new javax.swing.JLabel();
-        jlKasir = new javax.swing.JLabel();
-        jlTanggal = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jbClear = new javax.swing.JButton();
         jbTambah = new javax.swing.JButton();
@@ -77,45 +70,24 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtBarang = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jlKasir = new javax.swing.JLabel();
+        jlTanggal = new javax.swing.JLabel();
+        jlJam = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 153));
         setForeground(new java.awt.Color(0, 153, 153));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel1.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Indomaret Cabang Sawojajar");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 20, 550, 50);
-
-        jlJam.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jlJam.setForeground(new java.awt.Color(255, 255, 255));
-        jlJam.setText("08:05");
-        jPanel1.add(jlJam);
-        jlJam.setBounds(710, 50, 110, 20);
-
-        jlKasir.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jlKasir.setForeground(new java.awt.Color(255, 255, 255));
-        jlKasir.setText("Kasir : Erine");
-        jPanel1.add(jlKasir);
-        jlKasir.setBounds(710, 10, 110, 20);
-
-        jlTanggal.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jlTanggal.setForeground(new java.awt.Color(255, 255, 255));
-        jlTanggal.setText("Selasa, 14/03/2017");
-        jPanel1.add(jlTanggal);
-        jlTanggal.setBounds(710, 30, 110, 20);
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 950, 90);
-
-        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 0));
         jPanel2.setLayout(null);
 
+        jbClear.setBackground(new java.awt.Color(204, 204, 0));
         jbClear.setText("Clear");
         jbClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,8 +95,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jbClear);
-        jbClear.setBounds(210, 340, 130, 40);
+        jbClear.setBounds(330, 140, 80, 30);
 
+        jbTambah.setBackground(new java.awt.Color(204, 204, 0));
         jbTambah.setText("Tambah");
         jbTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,8 +105,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jbTambah);
-        jbTambah.setBounds(60, 340, 130, 40);
+        jbTambah.setBounds(330, 80, 80, 30);
 
+        jbTotal.setBackground(new java.awt.Color(204, 204, 0));
         jbTotal.setText("Total");
         jbTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,29 +115,29 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jbTotal);
-        jbTotal.setBounds(360, 340, 130, 40);
+        jbTotal.setBounds(330, 200, 80, 30);
         jPanel2.add(jtNama);
-        jtNama.setBounds(120, 130, 350, 40);
+        jtNama.setBounds(120, 130, 180, 30);
         jPanel2.add(jtHarga);
-        jtHarga.setBounds(120, 190, 350, 40);
+        jtHarga.setBounds(120, 190, 180, 30);
 
-        jLabel4.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("Harga Barang");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 190, 110, 40);
+        jLabel4.setBounds(10, 190, 120, 30);
 
-        jLabel7.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
         jLabel7.setText("Nama Barang");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(10, 130, 110, 40);
+        jLabel7.setBounds(10, 130, 120, 30);
 
-        jLabel8.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
         jLabel8.setText("ID Barang");
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(10, 70, 110, 40);
+        jLabel8.setBounds(10, 70, 120, 30);
 
         jtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +145,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jtID);
-        jtID.setBounds(120, 70, 350, 40);
+        jtID.setBounds(120, 70, 180, 30);
 
         jtTransaksi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,28 +153,29 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jtTransaksi);
-        jtTransaksi.setBounds(120, 10, 350, 40);
+        jtTransaksi.setBounds(120, 10, 180, 30);
 
-        jLabel9.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
         jLabel9.setText("ID Transaksi");
         jPanel2.add(jLabel9);
-        jLabel9.setBounds(10, 10, 110, 40);
+        jLabel9.setBounds(10, 10, 120, 30);
 
-        jLabel6.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("Banyak Barang");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(10, 250, 110, 40);
+        jLabel6.setBounds(10, 250, 120, 30);
         jPanel2.add(jtBanyak);
-        jtBanyak.setBounds(120, 250, 350, 40);
+        jtBanyak.setBounds(120, 250, 180, 30);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(450, 90, 500, 390);
+        jPanel2.setBounds(450, 160, 420, 340);
 
-        jPanel3.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel3.setBackground(new java.awt.Color(153, 153, 0));
         jPanel3.setLayout(null);
 
+        jbDelete.setBackground(new java.awt.Color(204, 255, 0));
         jbDelete.setText("Delete");
         jbDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,8 +183,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jbDelete);
-        jbDelete.setBounds(10, 10, 110, 30);
+        jbDelete.setBounds(320, 40, 110, 30);
 
+        jbPrint.setBackground(new java.awt.Color(204, 255, 0));
         jbPrint.setText("Print");
         jbPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,28 +193,28 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jbPrint);
-        jbPrint.setBounds(290, 130, 130, 30);
+        jbPrint.setBounds(320, 120, 110, 30);
 
         jlTotal.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jlTotal.setForeground(new java.awt.Color(255, 255, 255));
         jlTotal.setText("0,00");
         jPanel3.add(jlTotal);
-        jlTotal.setBounds(240, 0, 220, 40);
+        jlTotal.setBounds(210, 0, 220, 40);
 
-        jlDisc.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jlDisc.setForeground(new java.awt.Color(255, 255, 255));
+        jlDisc.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jlDisc.setForeground(new java.awt.Color(51, 51, 51));
         jlDisc.setText("Disc. 0%");
         jPanel3.add(jlDisc);
-        jlDisc.setBounds(290, 50, 110, 30);
+        jlDisc.setBounds(220, 50, 60, 30);
         jPanel3.add(jtKembali);
-        jtKembali.setBounds(70, 130, 200, 30);
+        jtKembali.setBounds(70, 130, 150, 30);
 
-        jLabel11.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Kembali");
         jPanel3.add(jLabel11);
         jLabel11.setBounds(10, 130, 110, 30);
 
+        jbHitung.setBackground(new java.awt.Color(204, 255, 0));
         jbHitung.setText("Hitung");
         jbHitung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,29 +222,27 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jbHitung);
-        jbHitung.setBounds(160, 90, 110, 30);
+        jbHitung.setBounds(320, 80, 110, 30);
         jPanel3.add(jtBayar);
-        jtBayar.setBounds(70, 50, 200, 30);
+        jtBayar.setBounds(70, 50, 150, 30);
 
         jlTotal1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jlTotal1.setForeground(new java.awt.Color(255, 255, 255));
         jlTotal1.setText("Total:Rp.");
         jPanel3.add(jlTotal1);
-        jlTotal1.setBounds(130, 0, 220, 40);
+        jlTotal1.setBounds(100, 0, 220, 40);
 
-        jLabel10.setFont(new java.awt.Font("Humnst777 BT", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Iskoola Pota", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Bayar ");
         jPanel3.add(jLabel10);
         jLabel10.setBounds(10, 50, 110, 30);
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, 300, 450, 180);
+        jPanel3.setBounds(0, 320, 450, 180);
 
         jScrollPane1.setBackground(new java.awt.Color(0, 204, 204));
         jScrollPane1.setForeground(new java.awt.Color(0, 153, 153));
 
-        jtBarang.setBackground(new java.awt.Color(0, 153, 153));
         jtBarang.setForeground(new java.awt.Color(255, 255, 255));
         jtBarang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -307,9 +281,50 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jtBarang);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 90, 450, 210);
+        jScrollPane1.setBounds(0, 160, 450, 160);
 
-        setBounds(0, 0, 965, 522);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sidomar.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 190, 190);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("DFPOP1-W9", 1, 24)); // NOI18N
+        jLabel1.setText("Indomaret Cabang Sawojajar");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(70, 50, 340, 40);
+
+        jLabel3.setFont(new java.awt.Font("Tekton Pro Ext", 1, 14)); // NOI18N
+        jLabel3.setText("Temukan Kebutuhan Anda di Swalayan Kami");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(70, 110, 350, 19);
+
+        jLabel5.setFont(new java.awt.Font("Tekton Pro Ext", 1, 14)); // NOI18N
+        jLabel5.setText("Melayani Anda Dengan Sepenuh Hati");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(100, 90, 290, 19);
+
+        jlKasir.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        jlKasir.setText("Kasir : Iqbal ALbana");
+        jPanel1.add(jlKasir);
+        jlKasir.setBounds(460, 0, 220, 30);
+
+        jlTanggal.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        jlTanggal.setText("Selasa, 14/03/2017");
+        jPanel1.add(jlTanggal);
+        jlTanggal.setBounds(490, 20, 170, 30);
+
+        jlJam.setFont(new java.awt.Font("Matura MT Script Capitals", 0, 18)); // NOI18N
+        jlJam.setText("08:05");
+        jPanel1.add(jlJam);
+        jlJam.setBounds(550, 50, 50, 30);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(190, 0, 680, 160);
+
+        setBounds(0, 0, 884, 537);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTambahActionPerformed
@@ -443,7 +458,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
